@@ -1,0 +1,54 @@
+/* DynamicForm.css */
+
+.dynamic-form-container {
+	max-width: 80vw;
+	margin: 0 auto;
+	padding: 16px;
+	background-color: #f7f7f7;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dynamic-form-row {
+	margin-bottom: 16px;
+}
+
+.option-row {
+	margin-bottom: 8px;
+}
+
+.dynamic-form-divider {
+	background-color: rgb(80, 156, 255);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 850px) {
+	.dynamic-form-row,
+	.option-row {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		gap: 12px; /* Add some vertical space between input boxes */
+	}
+
+	.ant-col {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+
+	/* Adjust font size and padding for better responsiveness */
+	.ant-form-item-label {
+		font-size: 14px;
+		margin-bottom: 4px;
+	}
+
+	.ant-input,
+	.ant-select-selector {
+		font-size: 14px;
+		padding: 8px;
+	}
+
+	.ant-btn {
+		font-size: 14px;
+	}
+}
