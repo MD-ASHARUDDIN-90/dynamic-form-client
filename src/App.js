@@ -4,51 +4,17 @@ import DynamicForm from "./component/DynamicForm/DynamicForm";
 import UserForm from "./component/Form/UserForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./page/HomePage/HomePage";
+import AllFormsPage from "./page/AllFormsPage/AllFormsPage";
+import FormPage from "./page/FormPage/FormPage";
 
 function App() {
-	const dynamicFormDefinition = {
-		formName: "MyDynamicForm",
-		fields: [
-			{
-				label: "Full Name",
-				type: "text",
-				isRequired: true,
-			},
-			{
-				label: "Email",
-				type: "email",
-				isRequired: true,
-			},
-			{
-				label: "Password",
-				type: "password",
-				isRequired: true,
-				minLength: 8,
-				maxLength: 20,
-				regexValidation:
-					/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/,
-			},
-
-			{
-				label: "Gender",
-				type: "radio",
-				isRequired: true,
-				options: ["Male", "Female", "Other"],
-			},
-			{
-				label: "Subscribe to Newsletter",
-				type: "checkbox",
-				isRequired: false,
-			},
-		],
-	};
-
 	return (
 		<>
 			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<HomePage />} />
-					<Route path='/all-forms' element={<DynamicForm />} />
+					<Route path='/:id' element={<FormPage />} />
+					<Route path='/all-forms' element={<AllFormsPage />} />
 				</Routes>
 			</BrowserRouter>
 		</>

@@ -114,35 +114,23 @@ const DynamicForm = () => {
 								/>
 							</Form.Item>
 						</Col>
-						<Col span={12}>
-							<Form.Item label='Regex Validation'>
-								<Input
-									value={field.regexValidation || ""}
-									onChange={(e) => {
-										const updatedFields = [...formFields];
-										updatedFields[index].regexValidation = e.target.value;
-										setFormFields(updatedFields);
-									}}
-								/>
-							</Form.Item>
-						</Col>
+						{
+							// 	<Col span={12}>
+							// 	<Form.Item label='Regex Validation'>
+							// 		<Input
+							// 			value={field.regexValidation || ""}
+							// 			onChange={(e) => {
+							// 				const updatedFields = [...formFields];
+							// 				updatedFields[index].regexValidation = e.target.value;
+							// 				setFormFields(updatedFields);
+							// 			}}
+							// 		/>
+							// 	</Form.Item>
+							// </Col>
+						}
 					</>
 				);
-			case "email":
-				return (
-					<Col span={12}>
-						<Form.Item label='Regex Validation'>
-							<Input
-								value={field.regexValidation || ""}
-								onChange={(e) => {
-									const updatedFields = [...formFields];
-									updatedFields[index].regexValidation = e.target.value;
-									setFormFields(updatedFields);
-								}}
-							/>
-						</Form.Item>
-					</Col>
-				);
+
 			case "textarea":
 				return (
 					<Col span={12}>
