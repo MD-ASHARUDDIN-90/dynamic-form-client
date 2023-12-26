@@ -1,0 +1,13 @@
+.homepage {
+	position: relative;
+}
+
+.homepage-navbar {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
+
+.homepage-content {
+	padding-top: 4rem;
+}

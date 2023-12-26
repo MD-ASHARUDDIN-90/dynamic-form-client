@@ -1,0 +1,22 @@
+/* Navbar.css */
+.custom-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 850px) {
+	.custom-menu {
+		display: block;
+	}
+}
+
+.ant-menu-horizontal {
+	font-weight: bold;
+}
+
+.ant-menu-horizontal .ant-menu-item a {
+	font-weight: bold;
+}

@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import DynamicForm from "./component/DynamicForm/DynamicForm";
 import UserForm from "./component/Form/UserForm";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./page/HomePage/HomePage";
 
 function App() {
 	const dynamicFormDefinition = {
@@ -43,12 +45,12 @@ function App() {
 
 	return (
 		<>
-			{
-				//   <UserForm formDefinition={dynamicFormDefinition} />
-				// <br />
-				// <hr />
-			}
-			<DynamicForm />
+			<BrowserRouter>
+				<Routes>
+					<Route path='/' element={<HomePage />} />
+					<Route path='/all-forms' element={<DynamicForm />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }

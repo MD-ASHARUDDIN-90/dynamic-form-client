@@ -68,6 +68,10 @@ const DynamicForm = () => {
 					description: "Successfully created form.",
 					duration: 5,
 				});
+				setFormFields([
+					{ type: "text", label: "New Field", isRequired: false },
+				]);
+				setFormName("");
 			}
 		} catch (error) {
 			notification.error({
